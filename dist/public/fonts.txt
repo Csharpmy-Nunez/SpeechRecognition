@@ -1,0 +1,10 @@
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Poiret One', cursive;
+font-family: 'Josefin Slab', serif;
+font-family: 'Cinzel', serif;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Quattrocento', serif;
+font-family: 'Overlock', cursive;
+font-family: 'Syncopate', sans-serif;
+font-family: 'Rufina', serif;
+font-family: 'Marvel', sans-serif;

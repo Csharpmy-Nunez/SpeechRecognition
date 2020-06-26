@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Speech Recognition</title>
+
+  <script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="libraries/p5.speech.js"></script>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+
+  <!--CSS | BOOTSTRAP-->
+  <link href="https://fonts.googleapis.com/css?family=Cinzel|Josefin+Slab|Julius+Sans+One|Marvel|Overlock|Poiret+One|Quattrocento|Rajdhani|Rufina|Syncopate" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./public/styles.css">
+    <link rel="stylesheet" href="./public/stylerange.css">
+</head>
+<body><br><br>
+  
+  <div class="container">
+    <div class="wrapper animated slideInDown">
+    <div class="row">
+        <div class="col-md-8">
+            
+                <div class="jumbotron">
+                    <h2 class="text-center" ><strong>Speech Recognition Application</strong></h2>
+                    <p class=" text-success text-center colortitle"><strong>This is a simple application that uses the p5 library.</strong></p>
+                    <hr class="my-4"><br>
+                  
+                    
+                    <div class="isSpeaking alert alert-success"><i class="fa fa-volume-up" aria-hidden="true"></i> speaking...</div><br>
+                    
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter text..." aria-label="Search for..." id="texttospeak" required>
+                        <span class="input-group-btn">
+                          <button class="btn btn-info" id="btnSpeak" type="button" >Speak!</button>
+                        </span>      
+                  </div><br>
+                  <a href="./voicetotext.html" class="btn btn-info">Speech to Text</a>
+      
+                </div>
+        
+      </div>
+
+      <div class="col-md-4">
+          <div class="jumbotron">
+
+            
+             <p>
+                <div id="msg"></div>
+                <select name="Select a voice" id="dropdown_" class="btn btn-info" >
+                    <option selected disabled>Select a voice</option>
+                </select>
+             </p>
+
+             <p>
+                <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Adjust voice rate
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                <!--Set granularity to two decimal places and range to 0-1 -->
+                  <input type="range" name="" id="rate_adjuster" min="0" max="1" step="0.01">
+                </div><br>
+              </div>
+
+              <p>
+                  <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                    Adjust  volume
+                  </button>
+                </p>
+                <div class="collapse" id="collapseExample1">
+                  <div class="card card-body">
+                  <!--Set granularity to two decimal places and range to 0-1 -->
+                    <input type="range" name="" id="volume_adjuster" min="0" max="1" step="0.01">
+                  </div><br>
+                </div>
+
+                <p>
+                    <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                      Adjust  pitch
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExample2">
+                    <div class="card card-body">
+                    <!--Set granularity to two decimal places and range to 0-1 -->
+                      <input type="range" name="" id="pitch_adjuster" min="0" max="1" step="0.01">
+                    </div>
+                  </div>
+          </div>
+   
+      </div>
+  </div><!--End of 1st row-->
+</div>
+  </div><!--End of container-->
+  <!--Footer-->
+  <br /><br /><hr />
+  <footer>
+       <p id="date">&copy; Infinito IT Solutions</p>
+  </footer>
+    <!--/.Footer-->
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="./public/main.js" type="text/javascript"></script>
+  
+</body>
+</html>
